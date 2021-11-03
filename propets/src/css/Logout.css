@@ -1,0 +1,161 @@
+/* Home */
+
+.container{
+    width: 100%;
+    height: 85%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .wrapper{
+    margin-top: 100px;
+}
+
+.block{
+    height: 90%;
+    width: 45%;
+    
+}
+
+.block h1{
+    font-size: 2.5rem;
+}
+
+.block h1 span{
+    color: rgb(57, 194, 201);
+}
+
+.block-right{
+    background-image: url('./../images/poodles-doodles.jpg');
+    background-size: cover;
+}
+
+.block .lost{
+    position: absolute;
+    background-color: rgb(255, 102, 90);
+    width: 25%;
+    left: -30px;
+    bottom: 180px;
+    padding-left: 12.5%;
+    border-radius: 35px;
+    box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
+}
+
+.click{
+    display: none;
+}
+
+.lost:hover .replies{
+    display: none;
+}
+
+.lost:hover .click{
+    display: inline;
+}
+
+.found:hover .replies{
+    display: none;
+}
+
+.found:hover .click{
+    display: inline;
+}
+
+.block .found{
+    position: absolute;
+    background-color: rgb(57, 194, 201);
+    width: 20%;
+    bottom: 90px;
+    left: -30px;
+    padding-left: 12.5%;
+    border-radius: 35px;
+    box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
+}
+
+.lost:hover, .found:hover{
+    cursor: pointer;
+    background-color: rgb(255, 204, 50);
+}
+
+.block p{
+    position: absolute;
+    bottom: 10px;
+}
+
+.link{
+    color: rgb(57, 194, 201);
+}
+
+/* section */
+.section{
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.section-head{
+    width: 100%;
+    height: 17%;
+    background-color: rgb(57, 194, 201);
+    text-align: center;
+    color: white;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
+}
+
+.section-content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 64%;
+    width: 100%;
+}
+
+.section-img{
+    width: 45%;
+}
+
+.section-img .img{
+    width: 100%;
+}
+
+.section-text{
+    width: 45%;
+    text-align: left;
+}
+
+.section-text h3{
+    color: rgb(57, 194, 201);
+}
+
+li{
+    color: rgb(57, 194, 201);
+}
+
+li span{
+    color: black;
+}
+
+/* footer */
+
+.section-footer{
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(57, 194, 201);
+    color: white;
+}
+
+.section-footer h1{
+    margin-right: 20%;
+}
+
+.section-footer p{
+    margin-left: 20%;
+}

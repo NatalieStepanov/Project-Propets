@@ -1,0 +1,20 @@
+.input{
+    width: 50%;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(61, 178, 184);
+    margin-left: 10px;
+
+}
+
+.label{
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+}
+
+.field-error{
+    color: red;
+    text-align: right;
+    margin-right: 13%;
+}
