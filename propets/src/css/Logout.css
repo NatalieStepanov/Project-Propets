@@ -1,44 +1,113 @@
-/* Home */
+/* Head */
+.head-logout{
+    height: 70px;
+    width: 100%;
+    background-color:rgb(57, 194, 201);
+    box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
+}
 
+.section-top-text{
+    font-size: 1.8rem;
+}
+
+.head-wrapper-logout{
+    width: 74%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-wrapper img{
+   width: 150px;
+}
+
+.btn-signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    padding: 6px 28px;
+    background-color: rgb(57, 194, 201);
+    border: 1px solid white;
+    border-radius: 25px;
+    font-weight: lighter;
+}
+
+.btn-signin:hover{
+    cursor: pointer;
+    background-color: rgb(255, 187, 0);
+}
+
+/* body */
 .container{
     width: 100%;
-    height: 85%;
-    position: relative;
     overflow: hidden;
 }
 
 .container .wrapper{
+    width: 74%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.block-left, .block-right{
+    height: 100%;
+}
+
+.block-left .block-title{
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.8);
     margin-top: 100px;
 }
 
-.block{
-    height: 90%;
-    width: 45%;
-    
-}
-
-.block h1{
-    font-size: 2.5rem;
-}
-
-.block h1 span{
+.block-left h1 span{
     color: rgb(57, 194, 201);
 }
 
-.block-right{
-    background-image: url('./../images/poodles-doodles.jpg');
-    background-size: cover;
+.logout-link-block{
+    width: 100%;
+    margin-top: 50px;
 }
 
-.block .lost{
-    position: absolute;
-    background-color: rgb(255, 102, 90);
-    width: 25%;
-    left: -30px;
-    bottom: 180px;
-    padding-left: 12.5%;
-    border-radius: 35px;
+.lost, .found{
+    height: 90px;
+    line-height: 90px;
+    margin-left: -42%;
+    padding-left: 42%;
+    border-radius: 50px;
     box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
+}
+
+.lost{
+    width: 75%;
+    background-color: rgb(250, 84, 86);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lost h1{
+    display: inline-block;
+    _margin-right: 40px;
+}
+
+.lost img{
+    display: inline-block;
+    width: 80px;
+    margin-top: 15px;
+    
+}
+
+.found{
+    width: 65%;
+    margin-top: -5px;
+    background-color: rgb(57, 194, 201);
 }
 
 .click{
@@ -51,6 +120,7 @@
 
 .lost:hover .click{
     display: inline;
+    cursor: pointer;
 }
 
 .found:hover .replies{
@@ -59,31 +129,34 @@
 
 .found:hover .click{
     display: inline;
-}
-
-.block .found{
-    position: absolute;
-    background-color: rgb(57, 194, 201);
-    width: 20%;
-    bottom: 90px;
-    left: -30px;
-    padding-left: 12.5%;
-    border-radius: 35px;
-    box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
-}
-
-.lost:hover, .found:hover{
     cursor: pointer;
-    background-color: rgb(255, 204, 50);
 }
 
-.block p{
-    position: absolute;
-    bottom: 10px;
+.lost-found-link{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
 }
 
-.link{
+.lost:hover{
+    background-color: rgb(255, 187, 0);
+}
+
+.text-join{
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 40px;
+}
+
+.link-join{
     color: rgb(57, 194, 201);
+}
+
+.block-right{
+    background-size: cover;
+}
+
+.block-right img{
+    height: 90%;
+    margin-top: 10px;
 }
 
 /* section */
@@ -106,18 +179,25 @@
     box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
 }
 
+.section-body{
+    width: 100%;
+    padding: 0;
+    margin-top: 60px;
+    height: 60%;
+}
+
 .section-content{
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 64%;
-    width: 100%;
+    width: 74%;
+    margin: 0 auto;
 }
 
 .section-img{
     width: 45%;
+    margin-left: -50px;
 }
 
 .section-img .img{
@@ -125,9 +205,11 @@
 }
 
 .section-text{
-    width: 45%;
+    width: 55%;
     text-align: left;
-}
+    font-size: 1.3rem;
+    font-weight: 300;
+}    
 
 .section-text h3{
     color: rgb(57, 194, 201);
@@ -141,21 +223,32 @@ li span{
     color: black;
 }
 
+.section-link{
+    font-weight: 400;
+}
+
 /* footer */
 
 .section-footer{
     height: 15%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: rgb(57, 194, 201);
     color: white;
 }
 
-.section-footer h1{
-    margin-right: 20%;
+.footer-container{
+    width: 74%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.section-footer p{
-    margin-left: 20%;
+.footer-container img{
+    width: 200px;
+    margin-top: 15px;
+}
+
+.footer-container p{
+    text-align: right;
 }

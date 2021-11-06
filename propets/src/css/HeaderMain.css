@@ -1,0 +1,45 @@
+/* Header-top */
+.head{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 4px 2px rgb(233, 228, 228);
+}
+
+.head-wrapper{
+    width: 72%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-wrapper img{
+   width: 150px;
+   margin-top: 5px;
+}
+
+.btn-addNew{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    padding: 4px 35px 4px 20px;
+    background-color: rgb(57, 194, 201);
+    border: 1px solid white;
+    border-radius: 25px;
+    font-weight: lighter;
+    margin-right: 2%;
+}
+
+.btn-addNew:hover{
+    cursor: pointer;
+}
+
+.btn-addNew .plus{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 30px;
+}
