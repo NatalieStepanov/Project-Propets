@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import './../../../css/Login.css'
-import logo from './../../../images/Logo.svg'
-import Field from '../../Field'
+import './../../css/Login.css'
+import logo from './../../images/Logo.svg'
+import Field from '../Field'
 import { useForm, set } from 'react-cool-form'
 import * as yup from 'yup'
 import { useHistory } from 'react-router-dom';

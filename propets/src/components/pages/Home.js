@@ -1,12 +1,12 @@
-import dog from './../../../images/8347.jpg'
-import logo from './../../../images/logo-white.svg'
-import whiteDog from './../../../images/Image-2.jpg'
-import lostIcon from './../../../images/lost-icon.svg'
-import './../../../css/Logout.css'
+import dog from './../../images/8347.jpg'
+import logo from './../../images/logo-white.svg'
+import whiteDog from './../../images/Image-2.jpg'
+import lostIcon from './../../images/lost-icon.svg'
+import './../../css/Home.css'
 import { Link, NavLink } from 'react-router-dom'
 import { useHistory } from 'react-router-dom';
 
-const Logout = () => {
+const Home = () => {
 
     const history = useHistory()
 
@@ -83,4 +83,4 @@ const Logout = () => {
     )
 }
 
-export default Logout
+export default Home
