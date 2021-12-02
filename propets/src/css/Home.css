@@ -195,6 +195,11 @@
     margin: 0 auto;
 }
 
+.section-content ul{
+    padding-left: 22px;
+    size: 2rem;
+}
+
 .section-img{
     width: 45%;
     margin-left: -50px;

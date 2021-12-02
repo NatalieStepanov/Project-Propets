@@ -5,3 +5,7 @@
     display: grid;
     grid-template-columns: auto 50% auto;
 }
+
+.content-main{
+    overflow: auto;
+}

@@ -2,13 +2,7 @@ import './../css/Loader.css'
 
 const Loader = () =>{
       return(
-          <>
-             <div className ="loader">
-                <div className ="ring">
-
-                </div>
-             </div>
-          </>
+         <div className="loader">Loading...</div>
       )
 }
 

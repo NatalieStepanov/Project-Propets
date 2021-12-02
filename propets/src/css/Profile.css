@@ -1,0 +1,107 @@
+.profile-wrapper{
+    width: 550px;
+    height: 95%;
+    margin: 0 auto;
+}
+
+.profile-wrapper h4{
+    color: rgb(87, 203, 209);
+    border-bottom: 2px solid rgb(171, 171, 171);
+    padding-bottom: 5px;
+}
+
+.profile-title{
+    width: 100%;
+    height: 35px;
+    background-color: rgb(105, 208, 214);
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-weight: 600;
+}
+
+.profile-name{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 15px;
+}
+
+.profile-name img{
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-name p{
+    color: rgb(114, 201, 217);
+}
+
+.pencil-icon{
+    color: rgb(186, 186, 186);
+    margin-left: 7px;
+    font-size: 10px;
+}
+
+.profile-form-wrapper{
+    width: 100%;
+    padding: 0;
+    text-align: right;
+}
+
+.profile-form-fields{
+    line-height: 2.8;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 0;
+}
+
+.profile-form-fields form{
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-form-fields input{
+    width: 77%;
+}
+
+.form-pet{
+    margin-right: 4%;
+}
+
+.form-pet input{
+    width: 71%;
+}
+
+.profile-pet{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.profile-pet img{
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.profile-btn{
+    padding: 7px 20px;
+    color: white;
+    border: 2px solid rgb(77, 195, 203);
+    background-color: rgb(105, 208, 214);
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+.save-icon{
+    margin-right: 10px;
+}

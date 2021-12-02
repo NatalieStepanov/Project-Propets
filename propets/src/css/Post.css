@@ -1,0 +1,103 @@
+.post-wrapper{
+    width: 550px;
+    height: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.post-user{
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.post-user img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-user-name h4{
+    color: rgb(123, 214, 219);
+    margin: 0;
+}
+
+.post-date{
+    font-size: smaller;
+    font-weight: 400;
+    color: rgb(204, 204, 204);
+    margin: 0;
+}
+
+.post-img{
+    width: 550px;
+}
+
+.post-content{
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.post-text{
+    font-size: smaller;
+    line-height: 1.5;
+    color: rgb(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+
+.post-like-count{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    margin: 10px 0 0 auto;
+    width: 100px;
+    height: 20px;
+    font-weight: 600;
+}
+
+.like-icon{
+    display: block;
+}
+
+.count-like{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.count-text{
+    color: rgb(123, 214, 219);
+    margin-top: 0;
+}
+
+.post-title-comments{
+    color: rgb(123, 214, 219);
+    border-bottom: 2px solid rgb(163, 163, 163);
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.post-date-comment{
+    display: flex;
+    width: 200px;
+    margin-top: 0;
+}
+
+.post-date-comment p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.post-text-comment{
+    font-size: smaller;
+    line-height: 1.5;
+    color: rgb(0, 0, 0, 0.6);
+    margin-top: 0;
+}

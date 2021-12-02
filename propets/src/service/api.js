@@ -1,18 +1,20 @@
 import axios from 'axios'
 
 const client = axios.create({
-    baseURL: 'http://propets.telran-edu.de:8080'
+    baseURL: 'http://localhost:5000'
 })
 
+//<-
 client.interceptors.response.use(
     response => {
-        console.log(response)
-        if(response.config.url.startsWith('/api/v1/auth/signin')){
-            localStorage.setItem('TOKEN', response.headers['access-token'])
-        }
+        console.log(response.data.token)
+        // if(response.config.url.startsWith('/login')){
+            localStorage.setItem('TOKEN', response.data.token)
+        // }
         return response
     },
-    function (error){
+    error=>{
+        console.dir(error)
         if(error.response.status === 401){
             localStorage.removeItem('TOKEN')
         }
@@ -20,33 +22,71 @@ client.interceptors.response.use(
     }
 )
 
+//->
 client.interceptors.request.use(
     config =>{
-        if(
-            !config.url.startsWith('/api/v1/auth')
-        ){
+        console.log(config)
+        /* if(
+            !config.url.startsWith('/auth')
+        ){ */
             config.headers = {
-                'Access-Token':localStorage.getItem('TOKEN') || ''
+                authorization: localStorage.getItem('TOKEN') || ''
             }
-        }
+        // }
+        return config
+    },
+    function(error){
+        return Promise.reject(error)
     }
 )
 
-export const signUp = async (fullName, email, password) =>{
+export const signUp = async ({full_name, email, password}) =>{
+    console.log(full_name, email, password)
     try{
-         const response = await client.post('/api/v1/auth/signup', {fullName, email, password})
-         await client.get(`/api/v1/users/${response.data}`)
-         console.log(response.data)
+         const response = await client.post('/api/users/registration', {full_name, email, password})
+         console.log(response)
     }catch(error){
         throw new Error(error.message)
     }
 }
 
-export const signIn = async (email, password) =>{
+export const signIn = async ({email, password}) =>{
     try{
-         await client.post('/api/v1/auth/signin', {email, password})
-         console.log('sig in success')
+        
+        const response = await client.post('/api/users/login', {email, password})
+         console.log('login success', response)
+    }catch(error){
+        console.log(error)
+        throw new Error ('wrong email or password')
+    }
+}
+
+/* export const updateUser = async ({phone, avatar, pet, nick, photo, id}) =>{
+    try{
+         await client.put(`/api/v1/users/:${id}`, {phone, avatar, pet, nick, photo})
+         console.log('update success')
     }catch(error){
         throw new Error (error.message)
     }
-}
+} */
+
+/* export const getUserById = async ()=>{
+    try{
+        const response = await client.get(`/api/v1/users/${response.data.id}`)
+        console.log(response)
+        return response.data
+    }catch(error){
+        console.log(error)
+    }
+} */
+
+/* export const getAllPosts = async () =>{
+    try{
+        const response = await client.get('/api/v1/posts')
+        console.log(response)
+    }catch(error){
+        console.log(error)
+    }
+} 
+
+getAllPosts() */

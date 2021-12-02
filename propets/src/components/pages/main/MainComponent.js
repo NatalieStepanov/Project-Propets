@@ -10,7 +10,7 @@ const MainComponent = () => {
             <HeaderMainComponent />
             <div className="head-main">
                 <LeftMainComponent />
-                <div>
+                <div className="content-main">
                     <ContentMain />
                 </div>
                 <RightMainComponent />

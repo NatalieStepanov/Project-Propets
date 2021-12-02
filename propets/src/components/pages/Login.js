@@ -1,16 +1,22 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './../../css/Login.css'
 import logo from './../../images/Logo.svg'
 import Field from '../Field'
 import { useForm, set } from 'react-cool-form'
 import * as yup from 'yup'
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
+import { loginAction } from '../../store/auth'
+import { useDispatch } from 'react-redux'
+import { signIn } from '../../service/api'
 
 
 const Login = () => {
+
+    // const dispatch = useDispatch()
+
     const yupSchema = yup.object().shape({
-        email: yup.string().email().required(),
-        password: yup.string().min(6).required()
+        email: yup.string().email().required('required'),
+        password: yup.string().min(6).required('required')
     })
 
     const validateWithYup = (schema) => async (values) => {
@@ -29,7 +35,10 @@ const Login = () => {
         onSubmit: (values, event, e) => {
             console.log(values)
             console.log(e.submitter.name)
-
+            if(e.submitter.name === 'login'){
+                signIn(values)
+                // dispatch(loginAction(values))
+            }
         }
     })
 
@@ -42,11 +51,11 @@ const Login = () => {
             <div className="main-wrapper">
                 <form ref={form} noValidate>
                     <div className="title">
-                        <img src={logo} alt='logo' onClick={() => { history.push(`/`) }} />
+                        <img src={logo} alt='logo' />
                         <h1>Welcome!</h1>
                     </div>
                     <button className="main-btn">Sign in</button>
-                    <br />
+                   <div className="login-form-fields">
                     <Field
                         label="Email: "
                         id="email"
@@ -55,20 +64,29 @@ const Login = () => {
                         error={errors.email}
                     />
                     <br />
-                    <br />
                     <Field
                         label="Password: "
                         id="password"
+                        type="password"
                         name="password"
                         placeholder="type your password"
                         error={errors.password}
                     />
-                    <br />
-                    <p className="text-signup">Not registrered yet? <Link className="main-link">Sign up</Link></p>
+                    </div>
+                    <p className="text-signup">Not registrered yet? <NavLink className="main-link" to="/signup">Sign up</NavLink></p>
                     <hr />
                     <div className="main-btns">
-                        <button name="cancel">Cancel</button>
-                        <button name="login">Submit</button>
+                        <button className="login-btn-cancel"
+                                name="cancel"
+                                onClick={()=>{
+                                    history.push('/home')
+                                }}>Cancel</button>
+                        <button className="login-btn-submit"
+                                name="login"
+                                onClick={()=>{
+                                    history.push('posts')
+                                }}
+                                >Submit</button>
                     </div>
                 </form>
             </div>

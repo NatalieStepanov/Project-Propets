@@ -15,7 +15,7 @@
     border-top: 1px solid rgba(247, 247, 247, 0.3);
     border-bottom: 1px solid rgba(247, 247, 247, 0.3);
     display: flex;
-    justify-content: start;
+    justify-content:flex-start;
     align-items: center;
     width: 100%;
     padding-top: 10px;
@@ -41,7 +41,7 @@
     display: block;
     width: 65%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     text-decoration: none;
     color: white;

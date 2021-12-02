@@ -7,6 +7,7 @@ import VetHelp from "../content/VetHelp"
 import Walking from "../content/Walking"
 import { Route, Switch } from 'react-router-dom';
 import Posts from "../content/Posts"
+import Post from "../content/Post"
 
 
 
@@ -22,7 +23,7 @@ const ContentMain = () => {
                 <Route path='/vethelp' component={VetHelp} />
                 <Route path='/profile' component={Profile} />
                 <Route path='/addPost' component={AddPost} />
-                
+                <Route path='/post' component={Post} />
             </Switch>
         </>
     )
