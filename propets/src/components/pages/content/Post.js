@@ -3,26 +3,32 @@ import pet from './../../../images/asset-45.jpg'
 import postImg from './../../../images/post.jpg'
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useParams } from 'react-router-dom'
+import { postByIdSelector } from '../../../store/posts'
+import { useSelector } from 'react-redux'
 
 const Post = () => {
+    const {id} = useParams()
+    const post = useSelector(state => postByIdSelector(state, parseInt(id)))
+    console.log(post)
     return (
         <div className="post-wrapper">
             <div className="post-user">
-                <img src={pet} alt="avatar" />
+                <img src={post.avatar} alt="avatar" />
                 <div className="post-user-name">
-                    <h4>John Goodboy</h4>
-                    <p className="post-date">6 April, 10:15</p>
+                    <h4>{post.full_name}</h4>
+                    <p className="post-date">{post.createdAt}</p>
                 </div>
             </div>
-            <img src={postImg} className="post-img" alt="dog" />
+            <img src={post.photo} className="post-img" alt="dog" />
             <div id="post-content">
-                <h4 className="post-title">Fox nymphs grab quick-jived waltz.</h4>
+                <h4 className="post-title">{post.title}</h4>
                 <p className="post-text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis sapiente, quaerat enim totam esse optio odio, molestias odit facere ipsa officia, tempore qui provident eligendi nobis blanditiis itaque suscipit? Enim alias iure laborum ut odit ex reiciendis tenetur recusandae, consectetur est debitis officiis facilis necessitatibus! Quidem laborum perferendis voluptates officiis.
+                    {post.text}
                 </p>
             </div>
             <div className="post-like-count">
-                <p className="count-like">86</p>
+                <p className="count-like">{post.count}</p>
                 <FontAwesomeIcon icon={faThumbsUp} className="like-icon" />
                 <p className="count-text">add like</p>
             </div>

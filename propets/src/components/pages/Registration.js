@@ -13,7 +13,7 @@ import { signUp } from '../../service/api'
 
 const Registration = () => {
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const yupSchema = yup.object().shape({
         full_name: yup.string().typeError('must be string').required('required'),
@@ -39,9 +39,9 @@ const Registration = () => {
             console.log(values)
             console.log(e.submitter.name)
             if(e.submitter.name === 'reg'){
-                signUp(values)
+                dispatch(registrationAction(values))
             }
-            history.push('/profile')
+            // history.push('/profile')
             
         }
     })
@@ -107,9 +107,9 @@ const Registration = () => {
                                     }}>Cancel</button>
                             <button name="reg" 
                                     className="reg-btn-submit"
-                                    onClick={()=>{
+                                    /* onClick={()=>{
                                         
-                                    }}
+                                    }} */
                             ><FontAwesomeIcon icon={faPaw} className="left-icon" /> Submit</button>
                         </div>
                     </div>

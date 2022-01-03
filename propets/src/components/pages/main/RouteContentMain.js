@@ -23,7 +23,7 @@ const ContentMain = () => {
                 <Route path='/vethelp' component={VetHelp} />
                 <Route path='/profile' component={Profile} />
                 <Route path='/addPost' component={AddPost} />
-                <Route path='/post' component={Post} />
+                <Route path='/post/:id' component={Post} />
             </Switch>
         </>
     )

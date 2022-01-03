@@ -1,4 +1,4 @@
-/* import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { signIn, signUp } from "../service/api";
 import { authSuccess, startLoading, stopLoading } from "./app";
 
@@ -51,4 +51,4 @@ export const registrationAction = (userData)=>{
     }
 }
 
-export const errorSelector = state => state.auth.error */
+export const errorSelector = state => state.auth.error

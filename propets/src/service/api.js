@@ -56,10 +56,21 @@ export const signIn = async ({email, password}) =>{
         const response = await client.post('/api/users/login', {email, password})
          console.log('login success', response)
     }catch(error){
-        console.log(error)
+        console.log(error.message)
         throw new Error ('wrong email or password')
     }
 }
+
+export const getAllPosts = async () =>{
+    try{
+        const response = await client.get('/api/posts')
+        console.log(response.data)
+        return response.data
+        
+    }catch(error){
+        console.log(error)
+    }
+} 
 
 /* export const updateUser = async ({phone, avatar, pet, nick, photo, id}) =>{
     try{
@@ -80,13 +91,5 @@ export const signIn = async ({email, password}) =>{
     }
 } */
 
-/* export const getAllPosts = async () =>{
-    try{
-        const response = await client.get('/api/v1/posts')
-        console.log(response)
-    }catch(error){
-        console.log(error)
-    }
-} 
 
-getAllPosts() */
+

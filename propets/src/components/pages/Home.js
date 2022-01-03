@@ -28,19 +28,19 @@ const Home = () => {
                     <div className="block-left">
                         <h1 className="block-title">Welcome to your <br /><span>pawfessional</span><br />community</h1>
                         <div className="logout-link-block">
-                            <Link className="lost-found-link">
+                            <NavLink className="lost-found-link" to="/lost">
                                 <div className="lost">
                                     <span className="replies"><h1>I lost my pet!</h1></span>
                                     <span className="click"><h1>Click to find!</h1></span>
                                     <img src={lostIcon} alt="losticon" />
                                 </div>
-                            </Link>
-                            <Link className="lost-found-link">
+                            </NavLink>
+                            <NavLink className="lost-found-link" to="/found" >
                                 <div className="found">
                                     <span className="replies"><h1>I found a pet!</h1></span>
                                     <span className="click"><h1>What to do?</h1></span>
                                 </div>
-                            </Link>
+                            </NavLink>
                         </div>
 
                         <p className="text-join">I'm okay, just want to <NavLink className="link-join" to="/login">JOIN</NavLink> the pawsome community!</p>
@@ -68,7 +68,7 @@ const Home = () => {
                                 <li><span>information about pet-setting and walking service;</span></li>
                                 <li><span>and of course, great communication with new friends in your social network!</span></li>
                             </ul>
-                            <p>Make an account and <Link className="link-join section-link">JOIN</Link> to us!</p>
+                            <p>Make an account and <NavLink className="link-join section-link" to="/login">JOIN</NavLink> to us!</p>
                         </div>
                     </div>
                 </div>
