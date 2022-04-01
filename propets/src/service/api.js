@@ -61,6 +61,29 @@ export const signIn = async ({email, password}) =>{
     }
 }
 
+export const updateUser = async ({id, full_name, avatarPhotoOld, petPhotoOld, ...rest}) =>{
+    try{
+        const formData = new FormData()
+        formData.append("full_name", full_name)
+        formData.append('avatar', rest.avatar && rest.avatar[0])
+        formData.append('email', rest.email)
+        formData.append('phone', rest.phone)
+        formData.append('user_pet', rest.user_pet)
+        formData.append('nick', rest.nick)
+        formData.append('pet_photo_old', petPhotoOld)
+        formData.append('avatar_old',  avatarPhotoOld)
+        const {data} = await client.put(`/api/users/${id}`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+        console.log(data)
+        return data
+    }catch(error){
+        throw new Error (error.message)
+    }
+}
+
 export const getAllPosts = async () =>{
     try{
         const response = await client.get('/api/posts')
@@ -72,14 +95,18 @@ export const getAllPosts = async () =>{
     }
 } 
 
-/* export const updateUser = async ({phone, avatar, pet, nick, photo, id}) =>{
+export const addNewPost = async (post)=>{
     try{
-         await client.put(`/api/v1/users/:${id}`, {phone, avatar, pet, nick, photo})
-         console.log('update success')
+        const response = await client.post('/api/posts', post)
+        console.log(response)
+        return response.data
     }catch(error){
-        throw new Error (error.message)
+        console.dir(error)
+        throw new Error(error.response.data.message)
     }
-} */
+}
+
+
 
 /* export const getUserById = async ()=>{
     try{

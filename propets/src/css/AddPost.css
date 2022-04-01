@@ -1,0 +1,94 @@
+.addPost-wrapper{
+    width: 550px;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.addPost-wrapper h4{
+    color: rgb(87, 203, 209);
+    border-bottom: 2px solid rgb(171, 171, 171);
+    padding-bottom: 5px;
+    width: 100%;
+    margin-right: 0;
+}
+
+.form-addPost{
+    width: 100%;
+    height: 80%;
+    padding: 0;
+    margin-top: 0;
+    margin: 0 auto;
+}
+
+.form-addPost label{
+    margin-left: 0;
+    text-align: left;
+    color: rgb(0, 0, 0, 0.7);
+    font-size: smaller;
+}
+
+.form-addPost input{
+    width: 99%;
+    border: 2px solid rgb(77, 195, 203);
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.form-addPost textarea{
+    width: 99%;
+    height: 50%;
+    border: 2px solid rgb(77, 195, 203);
+    padding: 5px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.form-addPost span{
+    color: rgb(77, 195, 203);
+    font-size: x-small;
+}
+
+.addPost-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.addPost-user{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addPost-user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: 0;
+}
+
+.addPost-user h4{
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    border: none;
+}
+
+.addPost-btn{
+    width: 150px;
+    border-radius: 25px;
+    padding: 3px 35px 3px 0;
+    background-color: rgb(56, 193, 201);
+    color: white;
+    border: 2px solid rgb(77, 195, 203)
+}
+
+.addPost-icon{
+    margin-right: 30px;
+    margin-left: 0;
+    font-size: 16px;
+}

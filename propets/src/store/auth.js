@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { signIn, signUp } from "../service/api";
+import { signIn, signUp, updateUser } from "../service/api";
 import { authSuccess, startLoading, stopLoading } from "./app";
 
 const initialState = {
@@ -48,6 +48,19 @@ export const registrationAction = (userData)=>{
         }finally{
             dispatch(stopLoading())
         }
+    }
+}
+
+export const updateUserAction = (obj, avatarOld, petPhotoOld) => async (dispatch) => {
+    dispatch(startLoading())
+    dispatch(clearError())
+    try {
+        const user = await updateUser(obj, avatarOld, petPhotoOld)
+        // dispatch(setCurrent(user))
+    }catch(e){
+        dispatch(setError({data: e.data, status: e.status}))
+    }finally{
+        dispatch(stopLoading())
     }
 }
 

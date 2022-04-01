@@ -2,7 +2,7 @@ import './../../../css/HeaderMain.css'
 import logo from './../../../images/Logo.svg'
 import { faSearch, faPaw } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { authSelector } from '../../../store/app';
 import { useSelector } from 'react-redux'
 
@@ -29,9 +29,9 @@ const HeaderMainComponent = () => {
                     ><FontAwesomeIcon icon={faPaw} className="btns-icon" />I found a pet</button>
                 </div>}
                 
-                    {/* <button className="btn-addNew"
+                    <button className="btn-addNew"
                         onClick={() => { history.push(`/addPost`) }}
-                    ><span className="plus">+</span> Add new</button> */}
+                    ><span className="plus">+</span> Add new</button> 
                 
             </div>
         </div >

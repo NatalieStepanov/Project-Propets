@@ -21,7 +21,7 @@ const ContentMain = () => {
                 <Route path='/walking' component={Walking} />
                 <Route path='/fostering' component={Fostering} />
                 <Route path='/vethelp' component={VetHelp} />
-                <Route path='/profile' component={Profile} />
+                <Route path='/profile/:id/edit' component={Profile} />
                 <Route path='/addPost' component={AddPost} />
                 <Route path='/post/:id' component={Post} />
             </Switch>
